@@ -21,4 +21,8 @@ datas=JSON.parse(localStorage.getItem('products'))
    this.datas.pop(name)
  }
   
+ buy(name:any){
+  alert("your order placed successfully" )
+  this.datas.pop(name)
+}
 }

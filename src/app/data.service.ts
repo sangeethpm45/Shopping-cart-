@@ -56,13 +56,16 @@ export class DataService {
     alert("Registration sucess")
     this.router.navigateByUrl('')
   }
-
+ len=this.cart_product.length
   cart(i: any) {
 
     this.cart_product.push(this.product_details[i])
     localStorage.setItem('products', JSON.stringify(this.cart_product))
-
+    
   }
+routing_cart(){
+  this.router.navigateByUrl('cart')
+}
 
 
 

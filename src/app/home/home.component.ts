@@ -15,11 +15,17 @@ data=this.dataservice.product_details
 clicked='i'
 cart(i:any){
   this.dataservice.cart(i)
-  
+ 
+ 
 }
+
 counter=0
 count(){
   this.counter++
+}
+len=this.dataservice.len
+cart_route(){
+this.dataservice.routing_cart()
 }
 
   ngOnInit(): void {
