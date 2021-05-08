@@ -23,7 +23,9 @@ counter=0
 count(){
   this.counter++
 }
-len=this.dataservice.len
+
+
+
 cart_route(){
 this.dataservice.routing_cart()
 }

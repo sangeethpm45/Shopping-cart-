@@ -18,6 +18,7 @@ export class DataService {
       { sl: 3, name: "vivo Y3", price: 18999, discount: 6000, ram: "6GB", seller: "vivo inc" },
       { sl: 4, name: "vivo Y50", price: 19999, discount: 9000, ram: "8GB", seller: "vivo inc" },
       { sl: 5, name: "vivo Y75", price: 12999, discount: 4000, ram: "2GB", seller: "vivo inc" }
+     
     ]
 
 
@@ -30,7 +31,7 @@ export class DataService {
       { uname: 1003, password: 1004 }
     ]
     datas=JSON.parse(localStorage.getItem("users"))
-  cart_product = []
+    cart_product = []
 
   login(accn: any, password: any) {
     let uname = this.datas.find(o => o.uname == accn)
@@ -56,13 +57,14 @@ export class DataService {
     alert("Registration sucess")
     this.router.navigateByUrl('')
   }
- len=this.cart_product.length
+
   cart(i: any) {
 
     this.cart_product.push(this.product_details[i])
     localStorage.setItem('products', JSON.stringify(this.cart_product))
     
   }
+  
 routing_cart(){
   this.router.navigateByUrl('cart')
 }
